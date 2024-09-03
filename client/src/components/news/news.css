@@ -1,0 +1,166 @@
+/* Wrapper for news section */
+.news-wrapper {
+    margin-left: 250px;
+}
+
+/* Card Styles */
+.everything-card {
+    background-color: rgb(225, 210, 210);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.everything-card-img {
+    width: 900px;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+
+.title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 70px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.description-text {
+    color: #333;
+    padding: 25px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.source-info {
+    margin-bottom: 0.5rem;
+}
+
+.link {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.origin-item {
+    margin-bottom: 0.5rem;
+}
+
+/* Flex utilities */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.h-48 {
+    height: 12rem;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.rounded-t {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.rounded-b {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-l {
+    border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-r {
+    border-bottom-right-radius: 0.5rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mt-10 {
+    margin-top: 2.5rem;
+}
+
+.my-10 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+    gap: 20px;
+}
+
+.pagination-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.pagination-btn:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+.pagination p {
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+/* Loader Styles */
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #007BFF;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

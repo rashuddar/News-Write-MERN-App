@@ -1,0 +1,202 @@
+/* Basic Styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+}
+
+/* Navbar Container */
+nav {
+    position: fixed;
+    /* Fixed position on the left side */
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Full height of the page */
+    width: 250px;
+    /* Fixed width */
+    background-color: #3f4b5f;
+    /* Tailwind's bg-gray-800 */
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    /* Vertically align nav items */
+    justify-content: space-between;
+    padding: 1rem;
+    /* Spacing inside nav */
+}
+
+.text-uppercase {
+    text-transform: capitalize;
+}
+
+/* Hamburger Menu for Mobile View */
+.ham-burger {
+    display: none;
+    /* Hidden on desktop */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Hamburger Lines */
+.lines {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    /* White color for lines */
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Active Hamburger Menu */
+.ham-open .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.ham-open .line-2 {
+    opacity: 0;
+}
+
+.ham-open .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Navbar List Styles */
+.nav-ul {
+    list-style: none;
+    /* Removes bullets */
+    padding: 0;
+    /* Removes default padding */
+    margin: 0;
+    /* Removes default margin */
+    display: flex;
+    flex-direction: column;
+    /* Aligns items vertically */
+    gap: 1rem;
+    /* Tailwind's gap-4 equivalent */
+}
+
+/* Nav Items */
+.nav-ul li {
+    margin-bottom: 1rem;
+    /* Space between items */
+}
+
+.nav-ul a {
+    color: #e2e8f0;
+    /* Tailwind's text-gray-200 */
+    text-decoration: none;
+    /* Removes underline */
+    font-weight: 600;
+    /* Font-semibold */
+    display: block;
+    /* Makes the entire area clickable */
+    padding: 0.5rem 1rem;
+    /* Padding around links */
+    transition: background-color 0.3s;
+}
+
+.nav-ul a:hover {
+    background-color: #4a5568;
+    /* Tailwind's bg-gray-600 */
+    border-radius: 0.375rem;
+    /* Rounded corners on hover */
+}
+
+/* Dropdown Styles */
+.dropdown-li {
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    left: 100%;
+    /* Positions the dropdown to the right of the nav */
+    top: 0;
+    background-color: #4a5568;
+    /* Tailwind's bg-gray-600 */
+    min-width: 200px;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* Tailwind's gap-2 */
+}
+
+.show-dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    padding: 0.5rem 1rem;
+    /* Padding for dropdown links */
+    color: #edf2f7;
+    /* Tailwind's text-gray-100 */
+    background-color: #4a5568;
+    border-radius: 0.375rem;
+}
+
+.dropdown a:hover {
+    background-color: #2d3748;
+    /* Tailwind's bg-gray-800 */
+}
+
+/* Active State for Nav */
+.active {
+    display: block;
+}
+
+/* Down Arrow Icon */
+.down-arrow-icon {
+    transition: transform 0.3s;
+}
+
+.down-arrow-icon-active {
+    transform: rotate(180deg);
+    /* Rotates the icon */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    nav {
+        width: 100%;
+        /* Full width for mobile */
+        height: auto;
+        position: relative;
+    }
+
+    .ham-burger {
+        display: block;
+        /* Show hamburger menu on mobile */
+    }
+
+    .nav-ul {
+        display: none;
+        /* Hide nav items by default */
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-ul.active {
+        display: flex;
+        /* Show nav items when active */
+    }
+
+    .dropdown {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
